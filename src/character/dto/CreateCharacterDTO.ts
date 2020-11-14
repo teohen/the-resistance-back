@@ -1,4 +1,4 @@
 export class CreateCharacterDTO {
     role: string
-    description: string
+    id_game: number
 }

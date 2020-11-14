@@ -1,15 +1,17 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Game } from './../game/game.entity';
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export class Character{
     @PrimaryGeneratedColumn("uuid")
     id: number
 
-    @Column()
-    role: string
+    
+    @ManyToOne(type => Game, game => game.characters)
+    game: Game
 
     @Column()
-    description: string
+    role: string
 
     @Column({default: true})
     ativo: boolean

@@ -6,6 +6,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CharacterModule } from "./character/character.module";
+import { GameModule } from './game/game.module';
 
 
 @Module({
@@ -15,7 +16,8 @@ import { CharacterModule } from "./character/character.module";
     "database": "./src/database/db.sqlite",
     autoLoadEntities: true,
   }),
-  CharacterModule
+  CharacterModule,
+  GameModule
 ],
   controllers: [AppController],
   providers: [AppService],
