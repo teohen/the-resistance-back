@@ -10,9 +10,6 @@ export class Character{
     @ManyToOne(type => Game, game => game.characters)
     game: Game
 
-    @Column()
-    role: string
-
     @Column({default: true})
     ativo: boolean
 
