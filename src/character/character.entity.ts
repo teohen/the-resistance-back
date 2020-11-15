@@ -3,6 +3,7 @@ import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export class Character{
+
     @PrimaryGeneratedColumn("uuid")
     id: number
 

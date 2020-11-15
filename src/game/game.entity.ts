@@ -4,6 +4,12 @@ import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 @Entity()
 export class Game {
 
+
+    constructor(game: Omit<Game, 'id' | 'createdAt' | 'updatedAt' | 'characters'>){
+        Object.assign(this, game)
+    }
+
+
     @PrimaryGeneratedColumn("uuid")
     id: number
 
