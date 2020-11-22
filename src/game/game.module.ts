@@ -7,6 +7,6 @@ import { GameService } from './game.service';
 @Module({
   imports: [TypeOrmModule.forFeature([Game])],
   controllers: [GameController],
-  providers: [GameService]
+  providers: [GameService],
 })
-export class GameModule {}
+export class GameModule { }
