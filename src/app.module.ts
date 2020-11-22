@@ -34,8 +34,6 @@ import configuration from './config/configuration';
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
-    consumer
-      .apply(logger)
-      .forRoutes({ path: 'cats', method: RequestMethod.GET });
+    consumer.apply(logger);
   }
 }
