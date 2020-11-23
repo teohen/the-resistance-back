@@ -7,6 +7,7 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CharacterModule } from "./character/character.module";
 import { GameModule } from './game/game.module';
+import { PlayerModule } from './player/player.module';
 
 
 @Module({
@@ -17,7 +18,8 @@ import { GameModule } from './game/game.module';
     autoLoadEntities: true,
   }),
   CharacterModule,
-  GameModule
+  GameModule,
+  PlayerModule
 ],
   controllers: [AppController],
   providers: [AppService],
