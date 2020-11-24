@@ -5,6 +5,7 @@ import { Injectable } from "@nestjs/common";
 export class CatService {
     private readonly cats: Cat[]
 
+    //creates a cat
     create(cat: Cat){
         this.cats.push(cat)
     }
